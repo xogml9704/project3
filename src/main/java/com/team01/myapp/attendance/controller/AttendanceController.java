@@ -91,7 +91,8 @@ public class AttendanceController {
 				} else if((8 < time && time < 14)) {
 					choice = "지각";
 				} else {
-					choice = "출근";
+					model.addAttribute("message", "너무 늦은 시간에 누르셨습니다. ");
+					return "/home"; 
 				}
 				attendanceService.updateAttendance(userId, updateDate, choice);
 			} else {
@@ -132,7 +133,6 @@ public class AttendanceController {
 		// 퇴근을 눌렀는지 확인하기 위한 leaveTime 생성 (null 또는 값이 있음)
 		String leaveTime = attendanceService.selectLeaveTime(attDate2, userId);
 		
-		// 현재 시간 생성
 		// 현재 시간 생성
 		SimpleDateFormat timeFormat = new SimpleDateFormat("HH");
 		int time = Integer.parseInt(timeFormat.format(date));
