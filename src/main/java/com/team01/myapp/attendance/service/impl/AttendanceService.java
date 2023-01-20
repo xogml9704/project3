@@ -99,7 +99,7 @@ public class AttendanceService implements IAttendanceService {
 	@Override
 	public void ex() {
 		// 출근 넣어주기
-		List<Attendance> list = AttendanceRepository.selectCheckOutAttNoSubjectId("20230118");
+		List<Attendance> list = AttendanceRepository.selectCheckOutAttNoSubjectId("20230120");
 		
 		System.out.println(list.get(0).getUserId());
 		

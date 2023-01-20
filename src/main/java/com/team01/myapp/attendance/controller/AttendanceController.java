@@ -59,7 +59,6 @@ public class AttendanceController {
 		} else {
 			// 18시 24시까지 시간을 눌렀을 때
 			model.addAttribute("message", "너무 늦은 시간에 누르셨습니다. ");
-			return "/home";
 		}
 		
 		// attendance subjectId 담기

@@ -173,7 +173,7 @@
 			attendance
 			(att_no, att_date, att_time, leave_time, status, u_id, subject_id)
 			VALUES
-			(seq_att_no.NEXTVAL, '20230118', '20230118 09:00:00', '20230118 18:00:00', '출근', #{userId}, #{subjectId})
+			(seq_att_no.NEXTVAL, '20230120', '20230120 09:00:00', '20230120 18:00:00', '출근', #{userId}, #{subjectId})
 		]]>
 	</insert>
 		
